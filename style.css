@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "MyHeadingFont";
+    src: url("ROMANTIC.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "My";
+    src: url("IMD Grotesk Variable.otf") format("opentype");
+}
+
+li{
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete-btn{
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.completed span{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.completed{
+    background-color: #e6e5e5;
+    transition: 0.1s;
+}
+
+body {
+    font-family: My;
+    /* background-color: #e8e6e6; */
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8e8e8, #f7f7f7);
+    min-height: 100vh;
+    margin: 0;
+
+    background-image:
+        url("back.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* body::before {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+
+    background-image: url("back.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: rotate(90deg);
+    z-index: -1;
+} */
+
+.app{
+    width: 500px;
+    max-width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 40px 0 25px 0;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: MyHeadingFont;
+    letter-spacing: 5px;
+}
+
+.subtitle{
+    margin-top: -20px;
+    font-size: 20px;;
+}
+
+#todotext{
+    width : 300px;
+    padding: 10px;
+    font-size:16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    caret-color: black;
+}
+#todotext:focus{
+    outline:none;
+    border-color: #555;
+}
+
+#clearcompleted{
+    width: fit-content;
+    padding:10px 12px;
+    background-color: #7f1d1d;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #7f1d1d;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition:0.2s;
+    width:100px;
+    user-select: none;
+}
+
+#addtask{
+    width: 100px;
+    padding:10px;
+    font-size: 16px;
+    background-color: rgb(18, 16, 16);
+    color:white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#addtask:hover{
+    background-color: white;
+    color: black;
+}
+
+#clearcompleted:hover{
+    background-color: white;
+    color: rgb(8, 8, 8);
+}
+
+#tasklist{
+    width:100%;
+    padding: 0px;
+    margin-top: 50px;
+}
+    
+li {
+    list-style: none;
+    background-color: #f0efef;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    min-height: 24px;
+
+    display:flex;
+    align-items: center;
+}
+
+li span{
+    flex:1;
+}
+
+.edit-btn,.delete-btn{
+    width : 70px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn{
+    background-color: #f1dada;
+    color: #8b1e1e;
+    border: 1px solid #e5bebe;
+}
+
+.delete-btn:hover{
+    background-color: #e8baba;
+}
+
+.edit-btn{
+    background-color: #e5e5e5;
+    color: #222;
+    border: 1px solid #d0d0d0;
+}
+
+.edit-btn:hover{
+    background-color: #d5d5d5;
+}
+
+.edit-btn:hover,.delete-btn:hover{
+    color: rgb(11, 11, 11);
+    transform: scale(1.08);
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.input-section{
+    display:flex;
+    font-family: My;
+    align-items: center;
+    margin-top: 70px;
+    width: 100%;
+    gap: 8px;
+}
+
+.input-section button {
+    white-space: nowrap;
+}
+
+li.editing span{
+    display: none   ;
+}
+
+li input{
+    flex:1;
+    padding: 7px 9px;
+    margin-right:10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+}
+
+li input:focus{
+    border-color: #555;
+}
+
+.heading{
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .input-section {
+        flex-wrap: wrap;
+    }
+
+    #todotext {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
