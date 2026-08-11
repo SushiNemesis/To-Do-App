@@ -1,11 +1,11 @@
 @font-face {
     font-family: "MyHeadingFont";
-    src: url("ROMANTIC.ttf") format("truetype");
+    src: url("Fonts/") format("truetype");
 }
 
 @font-face {
     font-family: "My";
-    src: url("IMD Grotesk Variable.otf") format("opentype");
+    src: url("Fonts/") format("opentype");
 }
 
 li{
@@ -42,7 +42,7 @@ body {
     margin: 0;
 
     background-image:
-        url("back.avif");
+        url("BackDrop/back.avif");
 
     background-size: cover;
     background-position: center;
