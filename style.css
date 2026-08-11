@@ -1,11 +1,11 @@
 @font-face {
     font-family: "MyHeadingFont";
-    src: url("Fonts/") format("truetype");
+    src: url("Fonts/ROMANTIC.TTF") format("truetype");
 }
 
 @font-face {
     font-family: "My";
-    src: url("Fonts/") format("opentype");
+    src: url("Fonts/IMD\ Grotesk\ Variable.otf") format("opentype");
 }
 
 li{
